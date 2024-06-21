@@ -1,3 +1,10 @@
+body html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 header {
     color: #192231;
     position: fixed;
@@ -6,13 +13,37 @@ header {
     background-color: white; 
     z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-    
+}
+
+h1 {
+    width: 17em;
+    margin-left: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #192231;/* The typwriter cursor */
+    font-size: 2em;
+    animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
+    animation-delay: 1s;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 16em }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #192231; }
 }
 
 h2 {
     width: 100%;
+    margin: 0;
 } 
 
+/* tool bar section */
 .toolbar ul {
     list-style-type: none;
     display: flex;
@@ -34,43 +65,66 @@ h2 {
     background-color: #CAC6BF; 
 }
 
-
-
-.emma{
-    margin: 0 auto;
+/* welcome Page */
+.emma {
     position: absolute;
-    top: 76%;
+    top: 65%;
     left: 20%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
     background-color: white;
-    width: 40%;
+    width: 41%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .emma {
+        top: 56%; 
+        left: 50%; 
+        width: 80%;
+        padding: 15px; 
+    }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .emma {
+        top: 35%; 
+        left: 50%; 
+        width: 90%; 
+        padding: 10px; 
+    }
+}
+
+.banner {
+    height: 600px; 
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    margin: 0 auto;
 }
 
 .banner_pic {
     width: 100%;
-    height:100%;
+    height: 750px;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    opacity: 0.8;
+    padding:0;
 }
 
 body {
     background-color: #192231;
 }
 
-main {
-    padding-top: 645px; 
-}
+/* intro section */
 
-section {
-    padding: 20px;
-    margin: 20px;
-}
 
 section#intro {
     padding-top: 50px; 
@@ -92,8 +146,8 @@ section#into p{
 }
 .intro-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 .intro-content p {
@@ -103,20 +157,48 @@ section#into p{
     margin-right: 20px;
 }
 
+#intro h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #192231;
+    background-color: #CAC6BF;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.animate-on-scroll {
+    animation: fadeIn 2s ease-in-out;
+}
+.knowbetter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px; /* Add margin to the sides for spacing */
+    animation: fadeIn 2s ease-in-out;
+}
+
 .details {
-    flex: 1;
-    margin-right: 10px;
-    font-size: 16px;
+    flex: 1 50%;
+    max-width: 400px;
+    margin-right: 25%;
+     font-size: 16px;
+    align-content: center;
 }
 
 .profile-pic {
-    flex: 1;
+    flex: 0 0 300px;
     max-width: 300px;
-    border-radius: 35%;
-    
-   
+    max-height: 300px; /* Ensure the image does not exceed a reasonable size */
+    border-radius: 35%; /* Optional: Add some styling to the image */
+    margin-left: 22%; /* Add some left margin for spacing */
+    align-content: center;
 }
-section#coding-proj h2{
+
+
+/* Resume */
+section#resume h2 {
     color: #192231;
     width: 100%;
     height: auto;
@@ -125,12 +207,10 @@ section#coding-proj h2{
     text-align: center;
 }
 
-section#coding-proj {
-    color: white;
-  
-}
 
-section#coding-proj {
+
+section#resume {
+    color: white;
     padding: 20px;
     margin: 20px;
 }
@@ -138,67 +218,6 @@ section#coding-proj {
 h2, h3, h4, h6 {
     margin-bottom: 10px;
 }
-
-project-category {
-    margin-bottom: 20px;
-}
-
-.list-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.list-group {
-    flex: 1;
-    margin-right: 20px; 
-    font-size:20px;
-}
-
-.list-group:last-child {
-    margin-right: 0;
-}
-
-.project {
-   
-    font-size: 18px;
-}
-
-.project img {
-    width: 300px; 
-    height: 400px; 
-    object-fit: cover; 
-    display: block;
-    margin-bottom: 10px;
-}
-
-.project-category h4 {
-    align-items: center;
-}
-
-.project-category img{
-        width: 500px; 
-        height: 700px; 
-        object-fit: cover;
-        display: block;
-        margin-bottom: 10px;
-        align-items: center;
-    
-    
-}
-
-.image-container {
-    display: flex;
-    justify-content: baseline;
-    flex-wrap: wrap;
-}
-
-.image-container img {
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-    margin-right: 10px; 
-}
-
 section#resume {
     padding: 20px;
     margin: 20px;
@@ -208,12 +227,14 @@ section#resume {
     margin-bottom: 30px;
 }
 
-.resume-section h3{
+.resume-section h3 {
     color: #CAC6BF;
     width: 100%;
-   text-align: center;
-   font-size: 24px;
+    text-align: center;
+    font-size: 24px;
 }
+
+
 
 .resume-entry {
     margin-bottom: 20px;
@@ -221,7 +242,7 @@ section#resume {
 
 .resume-entry h4 {
     margin-bottom: 10px;
-    color:#CAC6BF;
+    color: #CAC6BF;
 }
 
 .resume-entry ul {
@@ -242,6 +263,139 @@ section#resume {
     margin-bottom: 5px;
 }
 
+
+/* coding projects */
+section#coding-proj h2 {
+    color: #192231;
+    width: 100%;
+    height: auto;
+    font-size: 32px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+section#coding-proj {
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+h2, h3, h4, h6 {
+    margin-bottom: 10px;
+}
+
+.message-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Add some space between the image and the button */
+   
+}
+
+.button-output {
+    margin-left: 100px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Add some space between the button and the output text */
+   
+    
+}
+.running-differences {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Add some space between the image and the button */
+}
+
+.button-output-run {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Add some space between the button and the output text */
+}
+.mixed-message h4 {
+    text-align: center;
+    text-decoration: underline;
+    flex-wrap: wrap;
+   font-size: 20px;
+}
+
+.project-category h3{
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.runningdifferences h4{
+    text-align: center;
+    text-decoration: underline;
+    flex-wrap: wrap;
+   font-size: 20px;
+
+}
+
+.project-category p{
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-group {
+    flex: 1;
+    margin-right: 20px; 
+    font-size: 20px;
+}
+
+.list-group:last-child {
+    margin-right: 0;
+}
+
+.project {
+    font-size: 18px;
+}
+
+.project img {
+    width: 300px; 
+    height: 400px; 
+    object-fit: cover; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.project-category h4 {
+    align-items: center;
+}
+
+.project-category img {
+    width: 500px; 
+    height: 700px; 
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px; 
+}
+
+
+
+/* digital art portfolio */
 .procreate h3 {
     font-size: 24px;
 }
@@ -271,33 +425,31 @@ section#resume {
     height: auto;
     margin-right: 10px; 
 }
-.procreate-gif{
+
+.procreate-gif {
     display: flex;
     justify-content: baseline;
     flex-wrap: wrap;
 }
 
 .procreate-gif img {
-    height:400px;
+    height: 400px;
     width: 400px;
     align-items: center;
     max-width: 100%;
-    height: auto;
     margin-right: 10px; 
 }
 
-.pizza-menu{
+.pizza-menu {
     display: flex;
     justify-content: baseline;
     flex-wrap: wrap;
 }
 
-
 .pizza-menu img {
     width: auto;
     height: 400px;
-    margin-right:10px;
-
+    margin-right: 10px;
 }
 
 .halloween-special img {
@@ -324,5 +476,15 @@ ul li, ol li {
 @media (max-width: 480px) {
     .image-gallery img {
         max-width: 90%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro-content p, .profile-pic {
+        width: 100%;
     }
 }
