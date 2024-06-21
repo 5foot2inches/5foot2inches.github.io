@@ -442,16 +442,20 @@ h2, h3, h4, h6 {
 
 .image-container {
     display: flex;
-    justify-content: baseline;
+    justify-content: center; /* Center align items horizontally */
     flex-wrap: wrap;
+    gap: 10px; /* Space between images */
+    padding: 10px; /* Padding inside container */
 }
 
 .image-container img {
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-    margin-right: 10px; 
-}
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    flex-wrap: wrap;
+    border-radius: 10px; /* Rounded corners */
+    flex: 1; /* Distribute space evenly among images */
+} 
+
 
 
 

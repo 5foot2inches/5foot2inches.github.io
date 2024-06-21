@@ -265,87 +265,36 @@
             <div class="project-category">
                 <h3>HTML & CSS</h3>
                 <br>
-               
-                <div class="project-category" id="project-category">
-                    <script>   
-                      var projects = [
-                        {
-                            title: "Beginner Level Content Box Training",
-                            description: "This basic project was to practice how to use Block-level Elements.",
-                            images: ["resources/images/github.html.png", "resources/images/github.css.png"]
-                        },
-                        {
-                            title: "Dream Website",
-                            description: "This early project was to understand Flex and Spacing especially with different screen sizes.",
-                            images: ["resources/images/dreamwebsite.png", "resources/images/mediapractice.png"]
-                        },
-                        {
-                            title: "Practice Recreating Tea Website (WebDev)",
-                            description: "This project was to practice more advanced HTML and CSS techniques.",
-                            images: ["resources/images/teaParty.html.png", "resources/images/teaparty.css.png", "resources/images/teaparty.webdev.png"]
-                        }
-                    ];
-            
-                    // Select the project-category div
-                    var projectCategory = document.getElementById('project-category');
-                    var projectDivs = [];
-            
-                    // Loop through the projects and add them to the project-category div
-                    for (var i = 0; i < projects.length; i++) {
-                        var project = projects[i];
-            
-                        // Create a new project div
-                        var projectDiv = document.createElement('div');
-                        projectDiv.className = 'project';
-            
-                        // Add the project title
-                        var title = document.createElement('h4');
-                        title.innerText = project.title;
-                        projectDiv.appendChild(title);
-            
-                        // Add the project description
-                        var description = document.createElement('p');
-                        description.innerText = project.description;
-                        projectDiv.appendChild(description);
-            
-                        // Add the project images
-                        var imageContainer = document.createElement('div');
-                        imageContainer.className = 'image-container';
-                        for (var j = 0; j < project.images.length; j++) {
-                            var image = document.createElement('img');
-                            image.src = project.images[j];
-                            imageContainer.appendChild(image);
-                        }
-                        projectDiv.appendChild(imageContainer);
-            
-                        // Add the project div to the project-category div
-                        projectCategory.appendChild(projectDiv);
-            
-                        // Add the project div to the projectDivs array
-                        projectDivs.push(projectDiv);
-                    }
-            
-                    if (projectDivs.length > 0) {
-        projectDivs[0].classList.add('active');
-    }
-    
-    // Rotate through the projects every few seconds
-    var currentProjectIndex = 0;
-    setInterval(function() {
-        // Hide the current project
-        projectDivs[currentProjectIndex].classList.remove('active');
-    
-        // Move to the next project
-        currentProjectIndex++;
-        if (currentProjectIndex >= projectDivs.length) {
-            currentProjectIndex = 0; // Loop back to the first project
-        }
-    
-        // Show the next project
-        projectDivs[currentProjectIndex].classList.add('active');
-    }, 8000); // Change the project every 5000 milliseconds (5 seconds)</script>
+                <div class="project-category">
+                    <div class="project">
+                        <h4>Beginner Level Content Box Training</h4>
+                        <p>This basic project was to practice how to use Block-level Elements.</p>
+                        <div class="image-container">
+                            <img src="resources/images/github.html.png" alt="Beginner Level Content Box Training">
+                            <img src="resources/images/github.css.png" alt="Beginner Level Content Box Training">
+                        </div>
+                    </div>
                 
-        </div>
+                    <div class="project">
+                        <h4>Dream Website</h4>
+                        <p>This early project was to understand Flex and Spacing especially with different screen sizes.</p>
+                        <div class="image-container">
+                            <img src="resources/images/dreamwebsite.png" alt="Dream Website">
+                            <img src="resources/images/mediapractice.png" alt="Dream Website">
+                        </div>
+                    </div>
+                
+                    <div class="project">
+                        <h4>Practice Recreating Tea Website (WebDev)</h4>
+                        <p>This project was to practice more advanced HTML and CSS techniques.</p>
+                        <div class="image-container">
+                            <img src="resources/images/teaParty.html.png" alt="Practice Recreating Tea Website (WebDev)">
+                            <img src="resources/images/teaparty.css.png" alt="Practice Recreating Tea Website (WebDev)">
+                            <img src="resources/images/teaparty.webdev.png" alt="Practice Recreating Tea Website (WebDev)">
+                        </div>
+                    </div>
+                </div>
+                
             </div>
            
         
