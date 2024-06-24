@@ -159,10 +159,14 @@ body {
 }
 
 /* intro section */
-
+#intro {
+ 
+    color: white;
+   
+}
 
 section#intro {
-    padding-top: 50px; 
+    padding-top: 1px; 
     color: white;
 }
 
@@ -183,6 +187,8 @@ section#into p{
     display: flex;
     align-items: center;
     text-align: center;
+    
+   
 }
 
 .intro-content p {
@@ -190,6 +196,7 @@ section#into p{
     font-size: 1.2em;
     line-height: 1.8;
     margin-right: 20px;
+    
 }
 
 #intro h3 {
@@ -198,20 +205,15 @@ section#into p{
     text-align: center;
     color: #192231;
     background-color: #CAC6BF;
+
 }
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-.animate-on-scroll {
-    animation: fadeIn 2s ease-in-out;
-}
+
 .knowbetter {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px; /* Add margin to the sides for spacing */
-    animation: fadeIn 2s ease-in-out;
+
 }
 
 .details {
@@ -225,9 +227,10 @@ section#into p{
 .profile-pic {
     flex: 0 0 300px;
     max-width: 300px;
-    max-height: 300px; /* Ensure the image does not exceed a reasonable size */
-    border-radius: 35%; /* Optional: Add some styling to the image */
-    margin-left: 22%; /* Add some left margin for spacing */
+    max-height: 300px;
+    border-radius: 35%;
+    margin-right: 5px;
+    margin-left: 22%; 
     align-content: center;
 }
 
@@ -242,7 +245,9 @@ section#resume h2 {
     text-align: center;
 }
 
-
+.resume-entry{
+    line-height: 1.5;
+}
 
 section#resume {
     color: white;
@@ -290,14 +295,28 @@ h2, h3, h4, h6 {
 .skills-list {
     padding-left: 20px;
     list-style-type: none;
+    line-height: 1.5;
 }
 
 .skills-list li {
     margin-bottom: 5px;
 }
+.topanga {
+    display: flex;
+    align-items: flex-start; /* Align items to the top of the container */
+    flex-wrap: nowrap; /* Ensure items don't wrap */
+}
 
+.topanga-pic {
+    width: 300px;
+    height: 400px;
+    margin-right: 20px; /* Add some space between the image and text */
+}
 
-/* coding projects */
+.resume-entry {
+    flex: 1; /* Allow the resume-entry to take up the remaining space */
+}
+/*ding projects */
 section#coding-proj h2 {
     color: #192231;
     width: 100%;
@@ -480,26 +499,46 @@ section#digital-art h2 {
     text-transform: uppercase;
 }
 
-.procreate img {
-    width: 300px; 
-    height: 400px; 
-    object-fit: cover; 
-    display: block;
-    margin-bottom: 10px;
-}
-
 .procreate-masks {
-    display: flex;
-    justify-content: baseline;
-    flex-wrap: wrap;
-    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Corrected value */
+    gap: 20px; /* Spacing between the images */
+    padding: 20px; /* Padding around the gallery */
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
 }
 
+/* Individual image styling */
 .procreate-masks img {
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-    margin-right: 10px; 
+    width: 100%; /* Ensures the image takes up full width of the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    object-fit: cover; /* Ensures the image covers the allocated area */
+}
+
+/* Hover effect */
+.procreate-masks img:hover {
+    transform: scale(1.5); /* Slight zoom on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .procreate-masks {
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .procreate-masks {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .procreate-masks {
+        grid-template-columns: 1fr; /* 1 image per row on very small screens */
+    }
 }
 
 .procreate-gif {
@@ -548,7 +587,7 @@ ul li, ol li {
     height: 500px;
     width: 1200px;
     margin: auto;
-    overflow: hidden;
+   
 }
 
 .background-container {
@@ -556,12 +595,14 @@ ul li, ol li {
     width: 100%;
     height: 100%;
     z-index: 1;
+   
 }
 
 .background-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: solid 1.5px #CAC6BF;
 }
 
 .contact-container {
@@ -574,7 +615,7 @@ ul li, ol li {
     height: auto;
     z-index: 2;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: to make the text background slightly transparent */
+    background-color: rgba(255, 255, 255, 0.8); 
     color: #192231;
     padding: 20px;
     border-radius: 10px;
@@ -598,6 +639,9 @@ ul li, ol li {
 .contact-block h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    background-color: #CAC6BF;
+    text-align: center;
+    color: #192231;
 }
 
 .contact-block p {
