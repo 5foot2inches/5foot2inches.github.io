@@ -229,8 +229,7 @@ section#into p{
     max-width: 300px;
     max-height: 300px;
     border-radius: 35%;
-    margin-right: 5px;
-    margin-left: 22%; 
+   margin:0 auto;
     align-content: center;
     border: solid 1.5px #CAC6BF;
 }
@@ -312,14 +311,14 @@ h2, h3, h4, h6 {
 }
 .topanga {
     display: flex;
-    align-items: flex-start; /* Align items to the top of the container */
+    align-items: flex-start; 
     flex-wrap: nowrap; /* Ensure items don't wrap */
 }
 
 .topanga-pic {
     width: 300px;
     height: 400px;
-    margin-right: 20px; /* Add some space between the image and text */
+    margin-right: 20px; 
   
     border: solid 1.5px #CAC6BF;
 }
@@ -327,7 +326,7 @@ h2, h3, h4, h6 {
 .resume-entry {
     flex: 1; /* Allow the resume-entry to take up the remaining space */
 }
-/*ding projects */
+/*coding projects */
 section#coding-proj h2 {
     color: #192231;
     width: 100%;
@@ -354,7 +353,7 @@ h2, h3, h4, h6 {
 }
 
 .button-output {
-    margin-left: 100px;;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,7 +368,7 @@ h2, h3, h4, h6 {
 }
 
 .button-output-run {
-    margin-left:100px;
+    margin : 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center; 
