@@ -232,6 +232,7 @@ section#into p{
     margin-right: 5px;
     margin-left: 22%; 
     align-content: center;
+    border: solid 1.5px #CAC6BF;
 }
 
 
@@ -275,9 +276,10 @@ h2, h3, h4, h6 {
 .education {
         border: 2px solid #000; /* Add a border */
         padding: 20px; /* Add some padding */
-        margin: 10px 0; /* Add some margin */
-       background-color: rgba(97, 145, 211, 0.1);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+        margin: 5px 0; /* Add some margin */
+        background-color: rgba(97, 145, 211, 0.1); /* Background color with 0.1 opacity */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
 }
 
 
@@ -318,6 +320,8 @@ h2, h3, h4, h6 {
     width: 300px;
     height: 400px;
     margin-right: 20px; /* Add some space between the image and text */
+  
+    border: solid 1.5px #CAC6BF;
 }
 
 .resume-entry {
