@@ -272,6 +272,13 @@ h2, h3, h4, h6 {
     
 }
 
+.education {
+        border: 2px solid #000; /* Add a border */
+        padding: 20px; /* Add some padding */
+        margin: 10px 0; /* Add some margin */
+       background-color: rgba(97, 145, 211, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
 
 
 .resume-entry {
@@ -491,12 +498,14 @@ section#digital-art h2 {
     margin: 0;
 }
 .procreate h3 {
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
 }
 
 .procreate h4 {
     font-size: 18px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .procreate-masks {
@@ -515,6 +524,7 @@ section#digital-art h2 {
     border-radius: 10px; /* Rounded corners */
     transition: transform 0.3s ease; /* Smooth hover effect */
     object-fit: cover; /* Ensures the image covers the allocated area */
+    border: solid 1.5px #CAC6BF;
 }
 
 /* Hover effect */
@@ -545,6 +555,7 @@ section#digital-art h2 {
     display: flex;
     justify-content: baseline;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .procreate-gif img {
@@ -553,23 +564,37 @@ section#digital-art h2 {
     align-items: center;
     max-width: 100%;
     margin-right: 10px; 
+    margin: 0 auto;
+    border: solid 1.5px #CAC6BF;
+    border-radius: 10%;
+    
 }
 
 .pizza-menu {
     display: flex;
     justify-content: baseline;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .pizza-menu img {
     width: auto;
     height: 400px;
-    margin-right: 10px;
+    margin: 0 auto;
+    border: solid 1.5px #CAC6BF;
 }
-
+.halloween-special {
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
 .halloween-special img {
     width: 500px;
     height: auto;
+    margin: 0 auto;
+    align-items: center;
+    border: solid 1.5px #CAC6BF;
 }
 
 ul, ol {
