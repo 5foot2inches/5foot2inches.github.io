@@ -273,12 +273,22 @@ h2, h3, h4, h6 {
 }
 
 .education {
-        border: 2px solid #000; /* Add a border */
-        padding: 20px; /* Add some padding */
-        margin: 5px 0; /* Add some margin */
-        background-color: rgba(97, 145, 211, 0.1); /* Background color with 0.1 opacity */
+        border: 2px solid #000;
+        padding: 20px; 
+        margin: 5px 0; 
+        background-color: rgba(97, 145, 211, 0.1); 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
+}
+
+.skills-list {
+    border: 2px solid #000;
+    padding: 20px; 
+    margin: 5px 0; 
+    background-color: rgba(97, 145, 211, 0.1); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 2;
 }
 
 
@@ -312,7 +322,7 @@ h2, h3, h4, h6 {
 .topanga {
     display: flex;
     align-items: flex-start; 
-    flex-wrap: nowrap; /* Ensure items don't wrap */
+    flex-wrap: nowrap; 
 }
 
 .topanga-pic {
@@ -324,8 +334,45 @@ h2, h3, h4, h6 {
 }
 
 .resume-entry {
-    flex: 1; /* Allow the resume-entry to take up the remaining space */
+    flex: 1; 
 }
+
+@media (max-width: 480px) {
+    .resume-section {
+        padding: 15px;
+    }
+
+    .resume-entry h4 {
+        font-size: 1.1em;
+    }
+
+    .resume-entry ul {
+        padding-left: 15px;
+    }
+
+    .resume-entry ul li {
+        font-size: 0.9em;
+    }
+
+    .topanga {
+        flex-direction: column;
+        align-items: center;
+    
+       
+    }
+
+     .topanga-pic {
+        margin-right: 0;
+        margin-bottom: 15px;
+        max-width: 100%;
+    }
+
+    .resume-entry {
+        text-align: center;
+    }
+}
+
+
 /*coding projects */
 section#coding-proj h2 {
     color: #192231;
@@ -485,6 +532,22 @@ h2, h3, h4, h6 {
     flex: 1; /* Distribute space evenly among images */
 } 
 
+
+.message-container {
+    border: 2px solid #000;
+    padding: 20px; 
+    margin: 5px 0; 
+    background-color: rgba(97, 145, 211, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.running-differences {
+    border: 2px solid #000;
+    padding: 20px; 
+    margin: 5px 0; 
+    background-color: rgba(97, 145, 211, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 
 
@@ -706,5 +769,45 @@ footer {
     }
     .intro-content p, .profile-pic {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .toolbar ul {
+        flex-direction: column;
+    }
+    
+    .intro-content, .resume-section, .project-category, .procreate, .contact-container {
+        padding: 10px;
+    }
+    
+    .details ul {
+        padding-left: 20px;
+    }
+    
+    .resume-entry ul, .skills-list {
+        padding-left: 20px;
+    }
+
+    .contact-block {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .toolbar ul {
+        justify-content: space-between;
+    }
+
+    .intro-content, .resume-section, .project-category, .procreate, .contact-container {
+        padding: 15px;
+    }
+
+    .details ul {
+        padding-left: 25px;
+    }
+
+    .resume-entry ul, .skills-list {
+        padding-left: 25px;
     }
 }
