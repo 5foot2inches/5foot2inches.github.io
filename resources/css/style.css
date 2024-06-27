@@ -983,41 +983,55 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .toolbar {
+        max-width: 100%;
+        width: auto;
+    }
+    
     .toolbar ul {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
     }
     
     .intro-content, .resume-section, .project-category, .procreate, .contact-container {
-        padding: 10px;
+        padding: 5px;
     }
     
     .details ul {
-        padding-left: 20px;
+        padding-left: 5px;
     }
     
     .resume-entry ul, .skills-list {
-        padding-left: 20px;
+        padding-left: 5px;
     }
 
     .contact-block {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+/* Styles for screens between 769px and 1024px */
+@media (max-width: 769px){
+    .toolbar {
+        max-width: 100%;
+        width: auto;
+    }
+
     .toolbar ul {
-        justify-content: space-between;
+        justify-content: space-evenly;
+        width: 100%;
     }
 
     .intro-content, .resume-section, .project-category, .procreate, .contact-container {
-        padding: 15px;
+        padding: 5px;
     }
 
     .details ul {
-        padding-left: 25px;
+        padding-left: 5px;
     }
 
     .resume-entry ul, .skills-list {
-        padding-left: 25px;
+        padding-left: 5px;
     }
 }
